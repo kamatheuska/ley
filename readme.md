@@ -61,7 +61,7 @@ $ npm install --save-dev ley
 
 ### Setup
 
-You must have a `migrations` directory created, preferably in your project's root.
+You must have a `migrations` directory created, preferably in your project's root. This is also configurable by passing an option to the CLI.
 
 > **Note:** You may configure the target directory and location.
 
@@ -135,6 +135,15 @@ exports.down = async function (DB) {
       <img width="300" src="shots/up1.png" alt="ley up screenshot #1"><br>
       <img width="300" src="shots/up2.png" alt="ley up screenshot #2"><br>
       <img width="300" src="shots/up3.png" alt="ley up screenshot #3"><br>
+
+You can pass the option `-d` to ley to set which folder should be used for migrations. For example:
+
+
+```sh
+$ npm run migrate up -- -d dist/migrations
+```
+
+For more on what options are available to the CLI, check [this file](https://github.com/kamatheuska/ley/blob/master/bin.js)
 
 ### Programmatic
 
